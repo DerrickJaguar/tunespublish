@@ -1,0 +1,58 @@
+<!-- popup.html -->
+<div id="popup" style="display: none;">
+  <h2>Do you like this song?</h2>
+  <button id="play-button">Play Now
+    
+  </button>
+  <button id="close-button">Close</button>
+</div>
+
+<style>
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; /* Dark background */
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  #popup h2 {
+    margin-top: 0;
+    color: #87CEEB; /* Light blue text */
+  }
+
+  #play-button, #close-button {
+    background-color: #4682B4; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #play-button:hover, #close-button:hover {
+    background-color: #3498DB; /* Darker blue background on hover */
+  }
+</style>
+
+<script>
+  // Get the popup window and buttons
+  const popup = document.getElementById("popup");
+  const playButton = document.getElementById("play-button");
+  const closeButton = document.getElementById("close-button");
+
+  // Add event listeners to the buttons
+  playButton.addEventListener("click", () => {
+    // Play the song
+    console.log("Playing the song...");
+  });
+
+  closeButton.addEventListener("click", () => {
+    // Close the popup window
+    popup.style.display = "none";
+  });
+</script>
